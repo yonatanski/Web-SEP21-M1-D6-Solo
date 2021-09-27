@@ -59,18 +59,24 @@ console.log("After removing the delete propertie from Me Object", me)
 */
 console.log("\n------------------<Excrecise F >------------------")
 
-me.skills =[:\"HTML","CSS","C++"]
-console.log
+me.skills =["HTML","CSS","C++"]
+console.log("This is 'me' object after adding the skill array:", me)
 
 
 /* EXERCISE G
    Write a piece of code for programmatically removing the last skill from the skills array inside the me object.
 */
-
+console.log("\n------------------<Excrecise G >------------------")
+me.skills.pop()
+console.log("This is me object after removing the last element from skill array:",me)
 // JS Functions
 /* EXERCISE 1
     Write a function called dice; it should randomize an integer number between 1 and 6.
 */
+console.log("\n------------------<JS Function >------------------")
+
+console.log("\n------------------<Excrecise 1 >------------------")
+
 
 /* EXERCISE 2
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
