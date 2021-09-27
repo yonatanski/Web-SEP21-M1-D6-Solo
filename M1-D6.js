@@ -24,16 +24,17 @@ console.log(test)
     Create a variable called sum and assign to it the result of the sum between the numbers 10 and 20.
 */
 console.log("\n------------------<Excrecise B>------------------")
-let A = 12
-let B = 8
+let A = 10
+let B = 20
 let sum = A+B
 console.log("The sum of A+B is:", sum)
+// let sum = 10 + 20
 
 /* EXERCISE C
     Create a variable called random and assign to it a random number between 0 and 20 (it should be randomly created at each execution).
 */
 console.log("\n------------------<Excrecise C>------------------")
-let value1 = Math.random();
+let value1 = Math.random() * 20;
 console.log(value1)
 /* EXERCISE D
     Create a variable called me and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
@@ -76,34 +77,82 @@ console.log("This is me object after removing the last element from skill array:
 console.log("\n------------------<JS Function >------------------")
 
 console.log("\n------------------<Excrecise 1 >------------------")
+function dice(){
+    return Math.floor((Math.random()*6)+1)
+}
+console.log(dice())
 
 
 /* EXERCISE 2
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
 */
-
+console.log("\n------------------<Excrecise 2 >------------------")
+let n1 =30
+let n2 =20
+function whoIsBigger(n1,n2){
+    if (n1 > n2){
+        return n1
+      }else {
+      return n2 }  
+   
+      }
+    console.log(whoIsBigger(n1,n2))
 /* EXERCISE 3
     Write a function called splitMe which receives a string as a parameter and returns an array with every word in that string.
     Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
+console.log("\n------------------<Excrecise 3 >------------------")
+let string1 = "My name is Yonatan Deribe"
+function splitMe(string1){
+  return string1.split(" ")
+}
+console.log(splitMe(string1))
 
 /* EXERCISE 4
     Write a function called deleteOne which receives a string and a boolean as parameters.
     If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
+// console.log("\n------------------<Excrecise 4 >------------------")
+// let str
+// function deleteOne()
+// i didnt finish
 
 /* EXERCISE 5
    Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
 */
+console.log("\n------------------<Excrecise 5 >------------------")
+let stringg ="I have 2 sisters and 1 brother"
+function onlyLetters(stringg) {
+    let result = " "
+    for(let i = 0; i < stringg.length; i ++){
+        let Letter = stringg[i]
+        if (isNaN(Letter)){
+            result += Letter
+        }
+    }
+}
+    console.log(onlyLetters(stringg))
+// still confused
 
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */
+console.log("\n------------------<Excrecise 6 >------------------")
+let email = "phpcodeyg@gmail.com"
+ function isThisAnEmail(email) {
+    return (email.indexOf("@") > 0 && email.indexOf(".") > 0)}
+    console.log(isThisAnEmail(email))
 
 /* EXERCISE 7
    Write a function called whatDayIsIt that should return the current day of the week.
 */
+console.log("\n------------------<Excrecise 7 >------------------")
+function whatDayIsIt(){
+    let days = [ "Sun", "Mon", "Tue","Wed", "Thu", "Fri", "Sat"]
+    return days[(new Date()).getDay()]
+}
+console.log(whatDayIsIt())
 
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
@@ -312,4 +361,4 @@ const movies = [
       Poster:
         "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
     },
-  ];
+  ]
