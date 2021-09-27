@@ -149,10 +149,10 @@ let email = "phpcodeyg@gmail.com"
 */
 console.log("\n------------------<Excrecise 7 >------------------")
 function whatDayIsIt(){
-    let days = [ "Sun", "Mon", "Tue","Wed", "Thu", "Fri", "Sat"]
+    let days = ["Sunday","Monday", "Tuesday","Wednesday", "Thursday", "Friday", "Saturday"]
     return days[(new Date()).getDay()]
 }
-console.log(whatDayIsIt())
+console.log("Today is:",whatDayIsIt())
 
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
@@ -164,14 +164,32 @@ console.log(whatDayIsIt())
         values: [3, 3, 4]
     }
 */
+console.log("\n------------------<Excrecise 8 >------------------")
+// bit complicated
 
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 */
+console.log("\n------------------<Excrecise 9 >------------------")
+let selectedDate =6
+function HowManyDays(selectedDate) {
+    let today = new Date()
+    let difference = today - selectedDate
+    return difference / (1000 * 60 * 60 * 24)
+}
+console.log(HowManyDays(selectedDate))
 
 /* EXERCISE 10
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
 */
+console.log("\n------------------<Excrecise 10 >------------------")
+
+function isTodayMyBirthday() {
+    let today = new Date(2021, 10, 27)
+    let birthday = new Date(2000, 2, 5) // 2000 /feburary/05
+    return (  today.getMonth() === birthday.getMonth() && today.getDay() === birthday.getDay())
+}
+console.log(isTodayMyBirthday())
 
 // JS Arrays & Objects
 // NOTE: the movies array used in some exercises is defined at the end of this file
