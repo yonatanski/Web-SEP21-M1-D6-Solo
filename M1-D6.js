@@ -173,7 +173,7 @@ console.log("\n------------------<Excrecise 8 >------------------")
 console.log("\n------------------<Excrecise 9 >------------------")
 let selectedDate =6
 function HowManyDays(selectedDate) {
-    let today = new Date()
+    let today =  Date.now()
     let difference = today - selectedDate
     return difference / (1000 * 60 * 60 * 24)
 }
